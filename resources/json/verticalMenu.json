@@ -1,0 +1,10 @@
+{"menu": [
+  {"url":"dashboard-analytics", "name":"sidbar.Dashboard", "slug":"dashboard" , "badgeClass": "badge badge-warning badge-pill float-right", "icon":"feather icon-home"},
+  {"url":"", "name":"sidbar.ControlInTree", "icon":"feather icon-zap",
+      "submenu": [
+          {"url":"fawzy", "name":"fawzy", "i18n":"nav.sk_layout_2_columns"}
+      ]
+  }
+
+]}
+

@@ -4,7 +4,7 @@
 <div class="main-menu {{ $configData['menuType'] }} {{($configData['theme'] === 'light') ? "menu-light" : "menu-dark"}} menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto"><a class="navbar-brand" href="/">
+            <li class="nav-item mr-auto"><a class="navbar-brand" href="/home">
                     <div class="brand-logo"></div>
                     <h2 class="brand-text mb-0">{{env('APP_NAME')}}</h2>
                 </a></li>

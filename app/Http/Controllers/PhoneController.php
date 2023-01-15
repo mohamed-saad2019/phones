@@ -13,7 +13,6 @@ class PhoneController extends Controller
     public function addNumbers(){
         return view('pages.addnumbers');
     }
-
     public function uploadxls(Request $request){
 
         $request->validate([

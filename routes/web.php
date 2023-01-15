@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login\CustomAuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PhoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ Route::get('/logout', [CustomAuthController::class, 'signOut'])->name('logout');
 Route::get('/home',  [DashboardController::class, 'home']); 
 
 // Route Dashboards
+Route::group(["middleware" => "auth:web"], function () {
+    Route::get('/uploadXls',  [PhoneController::class, 'addNumbers'])->name('uploadXls'); 
+    Route::post('/saveXls',  [PhoneController::class, 'uploadxls'])->name('saveXls'); 
+
+});
+

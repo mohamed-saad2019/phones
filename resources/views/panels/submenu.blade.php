@@ -8,9 +8,9 @@
             }
         ?>
         <li class="{{ (request()->is($submenu->url)) ? 'active' : '' }}">
-            <a href="{{route('uploadXls') }}">
+            <a href="{{ $submenu->url }}">
                 <i class="{{ isset($submenu->icon) ? $submenu->icon : "" }}"></i>
-                <span class="menu-title" data-i18n="{{ $submenuTranslation }}">{{__('sidbar.uploadXls')}}</span>
+                <span class="menu-title" data-i18n="{{ $submenuTranslation }}">{{ $submenu->name }}</span>
             </a>
             @if (isset($submenu->submenu))
                 @include('panels/submenu', ['menu' => $submenu->submenu])

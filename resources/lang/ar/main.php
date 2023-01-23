@@ -12,9 +12,15 @@ return [
     'Logout' => 'تسجيل الخروج',
     'UserLoginSuccess' => 'تم تسجيل الدخول بنجاح',
     'HaveMistakeIndata' =>'يوجد خطأ فى بيانات الدخول',
-    'uploadxls'     =>  'رفع ملف الاكسيل',
-    'choosefile'    =>  'أختر الملف المراد رفعه',
-    'upload'        =>  'رفع',
+
+    'phone_number' =>'رقم التليفون',
+    'company_number' =>'الشركة المشترك فيها ',
+    'update' =>'تحديث',
+    'status' =>'الحاله',
+    'allStatus' =>'جميع الحالات',
+    'status2' =>'لم يتم البحث عنه ',
+    'status1' =>'مشترك',
+    'status-1' =>'غير مشترك',
 
 
 ];

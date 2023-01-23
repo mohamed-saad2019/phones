@@ -2,8 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login\CustomAuthController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\PhoneController;
-
+use App\Http\Controllers\PhonesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,14 +25,18 @@ Route::get('welcome/{locale}', function ($locale) {
 
 // Route url
 Route::get('/', [CustomAuthController::class, 'index'])->name('login');
+
 Route::post('/', [CustomAuthController::class, 'PostLogin'])->name('login');
-Route::get('/logout', [CustomAuthController::class, 'signOut'])->name('logout');
-Route::get('/home',  [DashboardController::class, 'home']); 
-
-// Route Dashboards
-Route::group(["middleware" => "auth:web"], function () {
-    Route::get('/uploadXls',  [PhoneController::class, 'addNumbers'])->name('uploadXls'); 
-    Route::post('/saveXls',  [PhoneController::class, 'uploadxls'])->name('saveXls'); 
-
+Route::middleware(['auth:web'])->group(function () {
+    Route::get('/logout', [CustomAuthController::class, 'signOut'])->name('logout');
+    Route::get('/home',  [DashboardController::class, 'home']); 
+    Route::get('/phones',  [PhonesController::class, 'index'])->name('PhoneList'); 
+    Route::get('/phones/upload',  [PhonesController::class, 'upload'])->name('upload'); 
+    Route::get('/phones/export',  [PhonesController::class, 'export'])->name('export'); 
+    Route::Post('/phones/upload',  [PhonesController::class, 'uploadStore'])->name('uploadStore'); 
+    Route::get('/phones/download/simple', function () {
+        return Storage::download('public/simple.xlsx');
+    });
 });
 
+// Route Dashboards 

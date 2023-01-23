@@ -54,14 +54,14 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
+            'key' => env('AWS_ACCESS_KEY_ID', 'Same with the AWS_ACCESS_KEY_ID value in the .env file'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY', 'Same with the AWS_ACCESS_KEY_ID value in the .env file'),
+            'region' => env('AWS_DEFAULT_REGION', 'Same with the AWS_DEFAULT_REGION value in the .env file'),
+            'bucket' => env('AWS_BUCKET', 'Your s3 bucket'),
+            'url' => env('AWS_URL'), //You can keep this as is
+            'endpoint' => env('AWS_ENDPOINT'), //You can keep this as is
         ],
 
     ],

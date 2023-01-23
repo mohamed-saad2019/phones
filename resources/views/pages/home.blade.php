@@ -26,12 +26,5 @@
       </section>
   @endsection
 
-@section('page-script')
-        <script>
-                var nodes = @json($nodes);
-        </script>
-        <script src="{{ asset('tree/js/template.js') }}"></script>
 
-      
-@endsection
 

@@ -1,10 +1,7 @@
 {"menu": [
-  {"url":"/home", "name":"sidbar.Dashboard", "slug":"dashboard" , "badgeClass": "badge badge-warning badge-pill float-right", "icon":"feather icon-home"},
-  {"url":"", "name":"sidbar.ControlInTree", "icon":"feather icon-zap",
-      "submenu": [
-          {"url":"fawzy", "name":"fawzy", "i18n":"nav.sk_layout_2_columns"}
-      ]
-  }
+  {"url":"/phones", "name":"lang.Phones",  "badgeClass": "badge badge-warning badge-pill float-right", "icon":"feather icon-home"},
+  {"url":"/phones/upload", "name":"lang.UploadFile",  "badgeClass": "badge badge-warning badge-pill float-right", "icon":"feather icon-upload"},
+  {"url":"/phones/download/simple", "name":"lang.DownloadFileSimple",  "badgeClass": "badge badge-warning badge-pill float-right", "icon":"feather icon-download"}
 
 ]}
 
